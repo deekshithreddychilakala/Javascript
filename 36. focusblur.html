@@ -1,0 +1,35 @@
+<html>
+
+	<head>
+		<title>focus and blur</title>
+	</head>
+
+	<body>
+
+		<h1>focus and blur</h1>
+
+		Username:
+		<input type="text" id="TextBox1">
+		<span id="span1" style="color:gray; display:none">Use letters, numbers and hyphens.</span>
+
+		<script type="text/javascript">
+
+			document.getElementById("TextBox1") .addEventListener("focus", fun1);
+
+			document.getElementById("TextBox1") .addEventListener("blur", fun2);
+
+			function fun1()
+			{
+				document.getElementById("span1").style.display = "inline";
+			}
+
+			function fun2()
+			{
+				document.getElementById("span1").style.display = "none";
+			}
+
+		</script>
+
+	</body>
+
+</html>

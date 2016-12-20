@@ -1,0 +1,40 @@
+<html>
+
+	<head>
+		<title>JavaScript: CheckBox</title>
+	</head>
+
+	<body>
+
+		<h1>Checkbox - with js</h1>
+
+		<input type="checkbox" id="CheckBox1">
+		<label for="CheckBox1">I accept license agreement</label>
+		<br>
+		<input type="submit" id="Button1" disabled="disabled">
+
+		<script type="text/javascript">
+
+			var chk = document.getElementById("CheckBox1")
+			chk.addEventListener("change", fun1);
+
+			function fun1()
+			{
+				var c = document.getElementById("CheckBox1");
+				var b = c.checked;
+				var btn = document.getElementById("Button1");
+				if (b == true)
+				{
+					btn.disabled = "";
+				}
+				else
+				{
+					btn.disabled = "disabled";
+				}
+			}
+
+		</script>
+
+	</body>
+
+</html>

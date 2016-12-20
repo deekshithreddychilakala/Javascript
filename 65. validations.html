@@ -1,0 +1,57 @@
+<html>
+
+	<head>
+		<title>Validations in JS</title>
+	</head>
+
+	<body>
+
+		<form action="dummy.aspx" onsubmit="return fun1()">
+
+			Username:
+			<input type="text" id="TextBox1">
+			<span id="span1"></span>
+			<br>
+			<input type="submit">
+		</form>
+
+		<script type="text/javascript">
+
+			function fun1()
+			{
+				var txt1 = document.getElementById("TextBox1");
+				var uname = txt1.value;
+				var sp1 = document.getElementById("span1");
+				var b; //valid or invalid
+
+				//Rule 1: Username can't be blank.
+				if (uname == "")
+				{
+					sp1.innerHTML = "Please enter username";
+					sp1.style.color = "red";
+					b = false; //invalid
+				}
+
+				//Rule 2: Spaces not allowed in username
+				else if (uname.indexOf(" ") >= 0)
+				{
+					sp1.innerHTML = "Spaces not allowed in username";
+					sp1.style.color = "red";
+					b = false; //invalid
+				}
+
+				//valid
+				else
+				{
+					sp1.innerHTML = "";
+					b = true; //valid
+				}
+
+				return b; //return true or false to browser.
+			}
+
+		</script>
+
+	</body>
+
+</html>

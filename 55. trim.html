@@ -1,0 +1,24 @@
+<html>
+
+	<body>
+
+		<div id="div1"></div>
+		<div id="div2"></div>
+		
+		<script type="text/javascript">
+
+			var s1 = "          Hyderabad is one of the cities in India.     ";
+			var n1 = s1.length;
+
+			var s2, n2;
+			s2 = s1.trim();
+			n2 = s2.length;
+
+			document.getElementById("div1").innerHTML = n1; //55
+			document.getElementById("div2").innerHTML = n2; //40
+
+		</script>
+
+	</body>
+	
+</html>

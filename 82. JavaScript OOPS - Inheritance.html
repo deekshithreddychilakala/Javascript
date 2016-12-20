@@ -1,0 +1,47 @@
+<html>
+
+	<head>
+		<title>JavaScript OOPS - Example 7</title>
+	</head>
+
+	<body>
+
+		<h1>JavaScript OOPS - Example 7</h1>
+		<span id="span1"></span><br>
+		<span id="span2"></span><br>
+		<span id="span3"></span><br>
+		<span id="span4"></span><br>
+		<span id="span5"></span><br>
+
+		<script type="text/javascript">
+
+			//parent class
+			function Person(a, b)
+			{
+				this.FirstName = a;
+				this.LastName = b;
+			}
+
+			//child class
+			function Student(FirstName, LastName, Maths, Physics, Chemistry)
+			{
+				Person.call(this, FirstName, LastName); //inheritance
+				this.Maths = Maths;
+				this.Physics = Physics;
+				this.Chemistry = Chemistry;
+			}
+
+			//creating object
+			var s1 = new Student("Harry", "Potter", 89, 67, 57);
+
+			document.getElementById("span1").innerHTML = s1.FirstName;
+			document.getElementById("span2").innerHTML = s1.LastName;
+			document.getElementById("span3").innerHTML = s1.Maths;
+			document.getElementById("span4").innerHTML = s1.Physics;
+			document.getElementById("span5").innerHTML = s1.Chemistry;
+
+		</script>
+
+	</body>
+
+</html>

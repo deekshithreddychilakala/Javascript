@@ -1,0 +1,31 @@
+<html>
+
+	<head>
+		<title>click</title>
+	</head>
+
+	<body>
+
+		<h1>click</h1>
+
+		<div id="div1">this is div1</div>
+
+		<input type="button" id="button1" value="click me">
+
+		<script type="text/javascript">
+
+			var btn = document.getElementById("button1");
+			btn.addEventListener("click", fun1);
+
+			function fun1()
+			{
+				var msg = "Hello";
+				var d = document.getElementById("div1");
+				d.innerHTML = msg;
+			}
+
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,44 @@
+<html>
+
+	<head>
+
+		<title>mouseover and mouseout - with images</title>
+
+		<style type="text/css">
+			#myimage
+			{
+				cursor: pointer;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<h1>mouseover and mouseout - with images</h1>
+
+		<img src="tick1.jpg" id="myimage">
+
+		<script type="text/javascript">
+
+			var i = document.getElementById("myimage");
+
+			i.addEventListener("mouseover", fun1);
+
+			i.addEventListener("mouseout", fun2);
+
+			function fun1()
+			{
+				i.src = "tick2.jpg";
+			}
+
+			function fun2()
+			{
+				i.src = "tick1.jpg";
+			}
+
+		</script>
+
+	</body>
+
+</html>

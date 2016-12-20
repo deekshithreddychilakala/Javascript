@@ -1,0 +1,60 @@
+<html>
+	
+	<head>
+		<title>JavaScript: RadioButton</title>
+	</head>
+
+	<body>
+
+		<h1>RadioButtons - with JS</h1>
+
+		<form>
+
+			<input type="radio" id="RadioButton1" name="group1" checked="checked">
+			<label for="RadioButton1">Small</label>
+
+			<input type="radio" id="RadioButton2" name="group1">
+			<label for="RadioButton2">Medium</label>
+
+			<input type="radio" id="RadioButton3" name="group1">
+			<label for="RadioButton3">Large</label>
+
+			<br>
+			<div id="div1" style="font-size:20px;">
+				Hello, World
+			</div>
+
+		</form>
+
+		<script type="text/javascript">
+
+			var r1 = document.getElementById("RadioButton1");
+			var r2 = document.getElementById("RadioButton2");
+			var r3 = document.getElementById("RadioButton3");
+			var d1 = document.getElementById("div1");
+
+			r1.addEventListener("change", fun1);
+			r2.addEventListener("change", fun1);
+			r3.addEventListener("change", fun1);
+
+			function fun1()
+			{	
+				//alert(r1.checked);
+				//alert(r2.checked);
+				//alert(r3.checked);
+
+				if (r1.checked == true)
+					d1.style.fontSize = "20px"; //small
+
+				else if (r2.checked == true)
+					d1.style.fontSize = "35px"; //medium
+
+				else
+					d1.style.fontSize = "50px"; //large
+			}
+
+		</script>
+
+	</body>
+
+</html>

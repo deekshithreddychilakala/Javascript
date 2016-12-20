@@ -1,0 +1,37 @@
+<html>
+
+	<head>
+		<title>JavaScript: DropDownList</title>
+	</head>
+
+	<body>
+
+		<h1>DropDownList - with JS</h1>
+
+		<select id="DropDownList1">
+			<option>Choose Country</option>
+			<option>India</option>
+			<option>UK</option>
+			<option>US</option>
+		</select>
+
+		<div id="div1"></div>
+
+		<script type="text/javascript">
+
+			document.getElementById("DropDownList1") .addEventListener("change", fun1);
+
+			function fun1()
+			{
+				var d = document.getElementById("DropDownList1");
+				var c = d.value;
+				var msg = "You have selected: " + c;
+				d1 = document.getElementById("div1");
+				d1.innerHTML = msg;
+			}
+			
+		</script>
+
+	</body>
+
+</html>

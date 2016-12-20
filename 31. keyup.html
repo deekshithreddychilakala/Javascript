@@ -1,0 +1,35 @@
+<html>
+
+	<head>
+		<title>keyup</title>
+	</head>
+
+	<body>
+
+		<h1>keyup</h1>
+
+		Username:
+		<input type="text" id="TextBox1">
+		<br>
+
+		<span id="span1">Output here</span>
+
+		<script type="text/javascript">
+
+			var t = document.getElementById("TextBox1");
+			t.addEventListener("keyup", fun1);
+
+			function fun1()
+			{
+				var txt = document.getElementById("TextBox1");
+				var s = txt.value;
+				var msg = "Hello to " + s;
+				var sp = document.getElementById("span1");
+				sp.innerHTML = msg;
+			}
+
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,41 @@
+<html>
+
+	<head>
+
+		<title>JavaScript: div with close</title>
+
+		<style type="text/css">
+			#div1
+			{
+				background-color: skyblue;
+				text-align: center;
+				width: 400px;
+				margin: auto;
+				font-size: 25px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id="div1">
+			You got a new mail.
+			<a href="#" onclick="return false" id="Link1">Close</a>
+		</div>
+
+		<script type="text/javascript">
+
+			document.getElementById("Link1") .addEventListener("click", fun1);
+
+			function fun1()
+			{
+				var d1 = document.getElementById("div1");
+				d1.style.display = "none";
+			}
+
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+
+	<head>
+		<title>keypress</title>
+	</head>
+
+	<body>
+
+		<h1>keypress - only numbers</h1>
+
+		Number:
+		<input type="text" id="TextBox1">
+
+		<script type="text/javascript">
+
+			var txt = document.getElementById("TextBox1");
+			txt.addEventListener("keypress", fun1);
+
+			function fun1(event)
+			{
+				//event means "browser given details"
+				var ch = event.which; //ascii value of currently pressed character
+				//alert(ch);
+
+				if ( !((ch >=48 && ch <=57) || (ch == 8)))
+					event.preventDefault(); //stop default functionality
+			}
+
+		</script>
+
+	</body>
+
+</html>

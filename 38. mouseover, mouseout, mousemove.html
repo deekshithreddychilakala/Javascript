@@ -1,0 +1,51 @@
+<html>
+
+	<head>
+		<title>JavaScript Events - mouseover, mouseout and mousemove</title>
+
+		<style type="text/css">
+			#div1
+			{
+				width: 200px;
+				height: 200px;
+				background-color: lightgreen;
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<h1>JavaScript Events - mouseover, mouseout and mousemove</h1>
+
+		<div id="div1" onmouseover="fun1()" onmouseout="fun2()" onmousemove="fun3(event)">
+			mouseover me
+		</div>
+
+		<script type="text/javascript">
+
+			var d = document.getElementById("div1");
+
+			function fun1()
+			{
+				d.style.border = "4px solid red";
+			}
+
+			function fun2()
+			{
+				d.style.border = "none";
+			}
+
+			function fun3(event)
+			{
+				//event = browser given information
+				var x = event.pageX;
+				var y = event.pageY;
+				d.innerHTML = x + ", " + y;
+			}
+		
+		</script>
+
+	</body>
+
+</html>

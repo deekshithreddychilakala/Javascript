@@ -1,0 +1,48 @@
+<html>
+
+	<head>
+		<title>Regular Expression Validation using JS</title>
+	</head>
+   
+    <body>
+
+		<form action="http://localhost/test.asp" onSubmit="return fun1()">
+			
+			<label for="TextBox1">Email:</label><br>
+			<input type="text" name="TextBox1" id="TextBox1">
+			
+			<span id="span1" style="color:red">
+			</span>
+			<br>
+			
+			<input type="submit" value="Submit">
+		
+		</form>
+
+		<script type="text/javascript">
+   
+			function fun1()
+			{
+				//check email
+				var email = document.getElementById("TextBox1").value;
+				var patt1 = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$/i;
+				if (patt1.test(email))
+				{
+					document.getElementById("span1").innerHTML = "";
+					document.getElementById("TextBox1").style.backgroundColor = "#FFFFFF"; //white
+					return true; //valid (form will be submitted)
+				}
+
+				else
+				{
+					document.getElementById("span1").innerHTML = "Invalid E-Mail";
+					document.getElementById("TextBox1").style.backgroundColor = "#ff0000"; //red
+					return false; //invalid (stop submission)
+				}
+			}
+			
+		</script>
+
+   </body>
+   
+</html>

@@ -1,0 +1,32 @@
+		jSON
+(JavaScript Object Notation)
+---------------------------------
+
+   - jSON is a syntax to describe objects in JavaScript.
+
+   - An object represents a "record".
+
+   - A record contains set of properties and values that are related to one item.
+
+   - An item can be anything like a person, employee, department, product etc.
+
+
+
+Syntax of jSON
+------------------
+
+   { "Property": value, "Property": value, ... }
+
+
+
+Example of jSON
+--------------------
+
+   { "EmployeeName": "John", "Salary": 3000, "Department": "Sales" }
+
+
+
+Example 2 of jSON
+----------------------
+
+   { "CarModel": "Honda city", "CarColor": "White", "Year": 2013 }

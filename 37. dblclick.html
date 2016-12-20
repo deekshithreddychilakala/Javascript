@@ -1,0 +1,40 @@
+<html>
+
+	<head>
+
+		<title>dblclick</title>
+
+		<style type="text/css">
+			#div1
+			{
+				background-color: skyblue;
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<h1>dblclick</h1>
+
+		<div id="div1">double click me</div>
+
+		<script type="text/javascript">
+
+			document.getElementById("div1") .addEventListener("dblclick", fun1);
+
+			function fun1()
+			{
+					this.innerHTML = "thanx";
+					//this = div1
+			}
+
+		</script>
+
+	</body>
+
+</html>
